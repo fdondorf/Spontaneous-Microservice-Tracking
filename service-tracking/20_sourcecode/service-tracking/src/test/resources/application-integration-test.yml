@@ -11,17 +11,24 @@ spring:
       enabled: false
   main:
     allow-bean-definition-overriding: true #i dont remember why but i think there is a bug with spring cloud and OAuth2ClientContext
-    banner-mode: off
+
   datasource:
-    platform: h2
     driver-class-name: org.h2.Driver
     url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
     username: sa
     password: sa
-  jpa:
-    show-sql: false
-    hibernate:
-      ddl-auto: update
+   # url: jdbc:mysql://localhost:3306/spontaneous-service-tracking-test?serverTimezone=UTC
+   # username: spontaneous-service-track-test
+   # password: spontaneous-service-track-test
+   
+  # jpa:
+  #  properties:
+  #    hibernate:
+  #      dialect: org.hibernate.dialect.MySQL5Dialect
+  #  show-sql: false
+  #  hibernate:
+  #    ddl-auto: update # Hibernate ddl auto (create, create-drop, update)
+  #    naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
 
 # Feign
 feign:

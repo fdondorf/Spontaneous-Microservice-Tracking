@@ -13,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Type;
 import org.spontaneous.service.tracking.general.dataaccess.api.ApplicationPersistenceEntity;
 
 /**
@@ -38,6 +39,7 @@ public class TrackEntity {
 	private LocalDateTime creationTime;
 
 	@Column(name = "user_id")
+	@Type(type = "uuid-char")
 	private UUID userId;
 
 	private Long averageSpeed;

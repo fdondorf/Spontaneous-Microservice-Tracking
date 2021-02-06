@@ -38,7 +38,7 @@ import com.github.dozermapper.core.Mapper;
 @SpringBootTest
 @ContextConfiguration(classes = TrackingBootApp.class, initializers = ConfigFileApplicationContextInitializer.class)
 @WebAppConfiguration
-@TestPropertySource(properties = { "spring.config.location = classpath:application-test.yml" })
+@TestPropertySource(properties = { "spring.config.location = classpath:application-integration-test.yml" })
 public class TrackingControllerTest extends AbstractIntegrationTest {
 
 	private static final UUID USER_ID = UUID.fromString("401097a0-030e-47a8-b287-5a7e10a93025"); // UUID.randomUUID();
